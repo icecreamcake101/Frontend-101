@@ -1,0 +1,56 @@
+<!-- *********************************************
+   * Project Name : 2048                       *
+   * Date : 22 jan 2020                        *
+   * Author : Aditya Naidu (@icecreamcake101)  *
+   ********************************************* -->
+   
+
+<!doctype html>
+<html>
+    <head>
+        <title>2048</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" rel="stylesheet" />
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,300" rel="stylesheet" />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div class="main-container">
+            <h1>2048</h1>
+            <p>Score: <span id="score-counter">0</span></p>
+           
+            <div class="game-container">
+                
+                <div class="grid-container">
+                    <div class="grid-row">
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                    </div>
+                    <div class="grid-row">
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+
+                <!-- Moving Tiles -->
+                <div class="tile-container" id="tile-container"></div>
+            </div>
+        </div>
+        <script src="main.js"></script>
+    </body>
+</html>

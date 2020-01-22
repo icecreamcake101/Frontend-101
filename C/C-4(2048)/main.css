@@ -1,0 +1,212 @@
+/* *********************************************
+   * Project Name : 2048                       *
+   * Date : 22 jan 2020                        *
+   * Author : Aditya Naidu (@icecreamcake101)  *
+   ********************************************* */
+   
+
+
+
+/* Grid
+   ------------------------------------------------------------- */
+
+.grid-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.grid-row {
+    width: 100%;
+    height: 25%;
+}
+
+.space {
+    float: left;
+
+    width: 25%;
+    height: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.space:before {
+    content: ' ';
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #DAE2D0;
+
+    border-radius: 10px;
+}
+
+
+/* Tiles
+   --------------------------------------------------------------- */
+
+.tile-container {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+.tile {
+    position: absolute;
+    z-index: 1;
+
+    width: 25%;
+    height: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+
+    vertical-align: middle;
+    font-size: 2em;
+    font-weight: lighter;
+    color: #fff;
+
+    transition-property: top, left, transform;
+    transition-duration: 0.1s;
+
+    animation: grow 0.2s;
+    -webkit-animation: grow 0.2s;
+}
+
+.tile.dead {
+    z-index: -1;
+    transform: scale(0.5);
+}
+
+.tile:before {
+    content: ' ';
+    display: block;
+    z-index: -1;
+
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+
+    background-color: #b22ba2;
+
+    border-radius: 10px;
+
+    transition: background-color 0.2s;
+}
+
+.tile-text {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    margin-top: -0.5em;
+
+    height: 1em;
+    line-height: 1em;
+
+    text-align: center;
+}
+
+.tile-2:before { background-color: #EADE8C }
+.tile-4:before { background-color: #EFA628 }
+.tile-8:before { background-color: #9FEF28 }
+.tile-16:before { background-color: #903535 }
+.tile-32:before { background-color: #b26f2b }
+.tile-64:before { background-color: #a2b22b }
+.tile-128:before { background-color: #55b22b }
+.tile-256:before { background-color: #2bb274 }
+.tile-512:before { background-color: #2badb2 }
+.tile-1024:before { background-color: #2b64b2 }
+.tile-2048:before { background-color: #352bb2 } /* yay */
+.tile-4096:before { background-color: #7e2bb2 }
+.tile-8192:before { background-color: #b22ba2 }
+
+.pos-0-0 { left:  0%; top:  0%; }
+.pos-0-1 { left: 25%; top:  0%; }
+.pos-0-2 { left: 50%; top:  0%; }
+.pos-0-3 { left: 75%; top:  0%; }
+
+.pos-1-0 { left:  0%; top: 25%; }
+.pos-1-1 { left: 25%; top: 25%; }
+.pos-1-2 { left: 50%; top: 25%; }
+.pos-1-3 { left: 75%; top: 25%; }
+
+.pos-2-0 { left:  0%; top: 50%; }
+.pos-2-1 { left: 25%; top: 50%; }
+.pos-2-2 { left: 50%; top: 50%; }
+.pos-2-3 { left: 75%; top: 50%; }
+
+.pos-3-0 { left:  0%; top: 75%; }
+.pos-3-1 { left: 25%; top: 75%; }
+.pos-3-2 { left: 50%; top: 75%; }
+.pos-3-3 { left: 75%; top: 75%; }
+
+/* Animations
+------------------------------------------------------------------------------------------------ */
+
+@keyframes grow {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+@-webkit-keyframes grow {
+    from { transform: scale(0); }
+    to { transform: scale(1); }
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #BC5E5E;
+
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    color: #fff;
+}
+.main-container {
+    margin: 50px auto;
+
+    width: 100%;
+    max-width: 640px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+body:before {
+    content: ' ';
+    display: table;
+    height : 0;
+}
+
+
+
+
+
+.game-container:before {
+    content: ' ';
+    display: block;
+    padding-top: 100%;
+}
+
+.game-container {
+    position: relative;
+
+    width: 100%;
+
+    background-color: FEFEFE;
+
+    border-radius: 10px;
+}
