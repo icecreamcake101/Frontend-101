@@ -1,14 +1,13 @@
 <html>
 <head>
-    <title>Digital Clock using JavaScript</title>
+    <title>ACM</title>
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"/>
 
      <link rel="stylesheet" href="main.css" />
         
 </head>
 
-<!-- ON LOAD OF THE PAGE, THE CLOCK WILL START TICKING. -->
-<body onload="digitized();">
+<body onload="dtt();">
     <div style="background-color:#F3F3F3;
         max-width:220px;width:100%;margin:0 auto;padding:20px;">
 
@@ -17,10 +16,10 @@
                 <td>
                     <table cellpadding="0" cellspacing="0" border="0">
                     
-                        <!-- HOUR IN 'AM' AND 'PM'. -->
+                        
                         <tr><td class="clocklg" id="dc_hour"></td></tr>
 
-                        <!-- SHOWING SECONDS. -->
+                      
                         <tr><td class="clocklg" id="dc_second"></td></tr>
                     </table>
                 </td>
@@ -31,7 +30,7 @@
 
 <script>
     // OUR FUNCTION WHICH IS EXECUTED ON LOAD OF THE PAGE.
-    function digitized() {
+    function dtt() {
         var dt = new Date();    // DATE() CONSTRUCTOR FOR CURRENT SYSTEM DATE AND TIME.
         var hrs = dt.getHours();
         var min = dt.getMinutes();
