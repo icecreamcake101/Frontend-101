@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"/>
 
      <link rel="stylesheet" href="main.css" />
-        
+
 </head>
 
 <body onload="dtt();">
@@ -15,11 +15,11 @@
             <tr><td class="clock" id="dc"></td>  <!-- THE DIGITAL CLOCK. -->
                 <td>
                     <table cellpadding="0" cellspacing="0" border="0">
-                    
-                        
+
+
                         <tr><td class="clocklg" id="dc_hour"></td></tr>
 
-                      
+
                         <tr><td class="clocklg" id="dc_second"></td></tr>
                     </table>
                 </td>
@@ -42,16 +42,16 @@
         document.getElementById('dc').innerHTML = hrs + ":" + min;
         document.getElementById('dc_second').innerHTML = sec;
 
-        if (hrs > 12) { 
-            document.getElementById('dc_hour').innerHTML = 'PM'; 
+        if (hrs > 12) {
+            document.getElementById('dc_hour').innerHTML = 'PM';
         }
-        else { 
-            document.getElementById('dc_hour').innerHTML = 'AM'; 
+        else {
+            document.getElementById('dc_hour').innerHTML = 'AM';
         }
 
-        // CALL THE FUNCTION EVERY 1 SECOND (RECURSION).
+        // CALL THE FUNCTION EVERY 1 SECOND
         var time
-        time = setInterval('digitized()', 1000);
+        time = setInterval('dtt()', 1000);
     }
 
     function Ticking(ticVal) {
